@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eventos</title>
+</head>
+<body>
+  <div class="link-container"> </div>
+    <script>
+    fetch('links.html')
+        .then(response => response.text())
+        .then(data => {
+            const linkContainer = document.querySelector('.link-container');
+            linkContainer.innerHTML = data;
+        });
+    </script>
+  <h1>Eventos</h1>
+
+  <div>
+    <h2>Inscreva-se</h2>
+    <div>
+    <h2></h2>
+  </div>
+    <img src="Logo.jpg" alt="Imagem de inscrição">
+    <h2></h2>
+  </div>
+  
+  <form>
+    <fieldset>
+      <legend>Evento</legend>
+      <select id="evento" name="evento">
+        <option value="voo">Voe sem asas</option>
+        <option value="festa">Festa junina</option>
+        <option value="semana">Semana de Tecnologia</option>
+      </select>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Informações de Acesso</legend>
+      <label for="usuario">Nome de Usuário:</label>
+      <input type="text" id="usuario" name="usuario"><br><br>
+      
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha"><br><br>
+      
+      <label for="confirmarSenha">Confirmar Senha:</label>
+      <input type="password" id="confirmarSenha" name="confirmarSenha">
+    </fieldset>
+    
+    <fieldset>
+      <legend>Informações Pessoais</legend>
+      <label for="nomeCompleto">Nome Completo:</label>
+      <input type="text" id="nomeCompleto" name="nomeCompleto"><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      
+      <label for="celular">Celular:</label>
+      <input type="tel" id="celular" name="celular" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(99) 99999-9999"><br><br>
+      
+      <label>Sexo:</label>
+      <input type="radio" id="masculino" name="sexo" value="masculino">
+      <label for="masculino">Masculino</label>
+      <input type="radio" id="feminino" name="sexo" value="feminino">
+      <label for="feminino">Feminino</label><br><br>
+      
+      <label for="dataNascimento">Data de Nascimento:</label>
+      <input type="date" id="dataNascimento" name="dataNascimento"><br><br>
+      
+      <label for="corFavorita">Cor Favorita:</label>
+      <input type="color" id="corFavorita" name="corFavorita"><br><br>
+      
+      <label for="perfilGithub">Perfil de Github:</label>
+      <input type="url" id="perfilGithub" name="perfilGithub" pattern="https?://.*"><br><br>
+    </fieldset>
+    
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>

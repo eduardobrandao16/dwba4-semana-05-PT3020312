@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contato</title>
+</head>
+<body>
+  <div class="link-container"> </div>
+    <script>
+    fetch('links.html')
+        .then(response => response.text())
+        .then(data => {
+            const linkContainer = document.querySelector('.link-container');
+            linkContainer.innerHTML = data;
+        });
+    </script>
+  
+  <img src="Logo.jpg">
+  
+  <h2>Entrar</h2>
+  <form>
+      <label for="usuario">Nome de Usuário:</label>
+      <input type="text" id="usuario" name="usuario"><br><br>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha"><br><br>
+    <input type="submit" value="Enviar">
+    <a href="entrar.html"> Esqueci minha senha </a>
+  </form>
+
+  <h2></h2>
+  <h2></h2>
+
+  <a href = "https://www.facebook.com/ifsppirituba" target = "_blank">
+    <img src="facebook.png"
+      width = "70px"/>
+    </a>
+    <p><data>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100</data></p>
